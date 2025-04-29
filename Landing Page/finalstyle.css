@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Fonts*/
+@font-face {
+    font-family: 'Rastaglion';
+    src: url('fonts/Rastaglion.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Alte';
+    src: url('fonts/Alte.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Rastaglion', sans-serif;
+}
+
+#highlights {
+    background-image: url(BG3.jpg);
+    background-size: 100%;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+/*Header*/
+header {
+    background-color: #ebe0ed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.left,
+.center,
+.right {
+    flex-basis: 30%;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    font-family: 'Rastaglion', sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    color: #521678; 
+}
+
+button {
+    font-family: 'Rastaglion', sans-serif;
+    font-weight: bold;
+    color: #521678; 
+    background-color: #ebe0ed;
+    border: 2px solid #521678;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #a785f0; 
+    transform: scale(1.1); 
+}
+
+/*Welcome Banner*/
+.container1 {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.left1, .right1 {
+    width: 40%; 
+}
+
+.left1 {
+    padding: 20px;
+}
+
+.right1 {
+    padding: 20px;
+}
+
+.heading {
+    font-family: 'Rastaglion', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    font-style: italic;
+    color: #521678;
+    text-align: right;
+    line-height: 1.5;
+}
+
+.info {
+    font-family: 'Alte', sans-serif;
+    text-align: right;
+    line-height: 1.5;
+}
+
+.menu-button-container {
+    text-align: right; /* Align menu button to the right */
+    padding-top: 10px;
+}
+
+.menu-button {
+    font-family: 'Rastaglion', sans-serif;
+    font-weight: bold;
+    color: #521678;
+    background-color: #f8f0f1;
+    border: 2px solid #521678;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none; /* Remove underline from the anchor */
+    display: inline-block; /* Make it a block-level element */
+}
+
+.menu-button:hover {
+    background-color: #a785f0;
+    transform: scale(1.1);
+}
+
+.right1 iframe {
+    width: 100%; /* Make the video responsive */
+    height: 315px; /* Adjust the height as needed */
+    border: 2px solid #521678 ; /* Remove the border */
+    border-radius: 10px; /* Add border radius for a rounded appearance */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+/* Slideshow */
+.slider-wrapper{
+    position: relative;
+    margin: 0; 
+    overflow: hidden; 
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.25rem;
+    animation: slide 10s infinite; /* Add animation for slideshow */
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); } /* Start position */
+    25% { transform: translateX(-100%); } /* Slide to next image */
+    50% { transform: translateX(-200%); } /* Slide to second image */
+    75% { transform: translateX(-300%); } /* Slide to third image */
+    100% { transform: translateX(0); } /* Return to start position */
+}
+
+.slider img{
+    flex: 1 0 100%;
+    object-fit: cover;
+}
+
+.slider-nav {
+    display: flex;
+    justify-content: center; /* Center align the navigation */
+    position: absolute;
+    bottom: 1.25rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto; /* Center the navigation horizontally */
+    z-index: 1;
+}
+
+.slider-nav a {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: beige;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+    margin: 0 0.25rem; /* Add some space between navigation bullets */
+}
+
+.slider-nav a:hover{
+    opacity: 1;
+}

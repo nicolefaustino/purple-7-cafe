@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation | Purple 7 Cafe</title>
+    <link rel="stylesheet" href="reserveCSS.css">
+</head>
+<body>
+    <div class="background-image"></div>
+    <header>
+        <div class="menu">
+            <a href="FINAL.html">Home</a>
+            <a href="aboutUs.html">About Us</a>
+            <a href="menu.html">Menu</a>
+            <a href="events.html">Events</a>
+            <a href="contactUs.html">Contact Us</a>
+            <a href="FAQ.html">FAQs</a>
+        </div>
+        <div class="logo">
+            <img src="Logo.png" alt="Purple 7 Cafe Logo">
+        </div>
+        <a href="reservationForm.html" class="reserve-button">Reserve a Table</a>
+    </header>
+    <div class="text-container">
+        <div class="info-text">
+            <h3>Guidelines</h3>
+            <p>A. Dine-in guests are only allowed to dine in on their reserved timeslot, regardless of time of arrival.</p>
+            <ul>
+                <li>Ex. You booked a slot at 11:00 AM - 1:00 PM. If you arrive late, your slot will still end at 1:00 PM. 
+                    Consideration will be given if the situation allows.</li>
+            </ul>
+            <p>B. Booking of consecutive time slots is not allowed.</p>
+            <ul>
+                <li>Ex. You booked a slot at 11:00 AM. Your companion also booked a slot at 1:15PM. This is not allowed.</li>
+            </ul>
+            <p>C. No changing of tables will be allowed once form has been submitted. 
+                Kindly check the seat plan provided below. Actual cafe photo is also provided for reference.</p>
+            <p>D. Only the maximum capacity per table will be allowed. A guide is provided in the booking page. 
+                This is to avoid overbooking the cafe.</p>
+            <p>E. You may only book up to three (3) tables in one form. For additional tables, kindly fill out another form.</p>
+            <p>F. To confirm the booking, a reservation fee must be paid upon submission of this form.</p>
+        </div>
+        <form class="reservation-form" action="reservation_process.php" method="post">
+            <div class="form-group">
+                <label for="first-name">First Name *</label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last Name *</label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="contact-number">Contact Number *</label>
+                <input type="text" id="contact-number" name="contact-number" required>
+            </div>
+            <div class="form-group">
+                <label for="facebook-name">Facebook Name *</label>
+                <input type="text" id="facebook-name" name="facebook-name">
+            </div>
+            <div class="form-group">
+                <label for="facebook-link">Facebook Link *</label>
+                <input type="text" id="facebook-link" name="facebook-link">
+            </div>
+            <div class="form-group">
+                <label for="no-of-tables">No. of Tables *</label>
+                <input type="number" id="no-of-tables" name="no-of-tables" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="group-size">How many are you in your group? *</label>
+                <input type="text" id="group-size" name="group-size" required>
+            </div>
+            <div class="form-group">
+                <label for="timeslot">Choose your timeslot *</label>
+                <select id="timeslot" name="timeslot">
+                    <option value="11:00AM">11:00AM - 1:00PM</option>
+                    <option value="1:15PM">1:15PM - 3:15PM</option>
+                    <option value="3:30PM">3:30PM - 5:30PM</option>
+                    <option value="5:45PM">5:45PM - 7:45PM</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="payment-ref">Payment Reference Number *</label>
+                <input type="text" id="payment-ref" name="payment-ref" required>
+            </div>
+            <div class="form-group" style="flex: 1 1 100%;">
+                <input type="submit" value="Submit Reservation">
+            </div>
+        </form>
+    </div>
+    <div class="images-container">
+        <img src="seatplan1.png" alt="Seat Plan 1">
+        <img src="seatplan2.png" alt="Seat Plan 2">
+        <img src="actualphoto1.png" alt="Actual Photo 1">
+        <img src="actualphoto2.png" alt="Actual Photo 2">
+    </div>
+</body>
+</html>
